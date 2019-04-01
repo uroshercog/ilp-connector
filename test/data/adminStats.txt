@@ -1,0 +1,35 @@
+# HELP ilp_connector_incoming_ilp_packets Total number of incoming ILP packets
+# TYPE ilp_connector_incoming_ilp_packets counter
+ilp_connector_incoming_ilp_packets{result="fulfilled",account="test.cad-ledger",asset="CAD",scale="4"} 1
+ilp_connector_incoming_ilp_packets{result="fulfilled",account="test.usd-ledger",asset="USD",scale="4"} 2
+ilp_connector_incoming_ilp_packets{result="fulfilled",account="test.eur-ledger",asset="EUR",scale="4"} 1
+ilp_connector_incoming_ilp_packets{result="fulfilled",account="test.cny-ledger",asset="CNY",scale="4"} 1
+
+# HELP ilp_connector_incoming_ilp_packet_value Total value of incoming ILP packets
+# TYPE ilp_connector_incoming_ilp_packet_value counter
+ilp_connector_incoming_ilp_packet_value{result="fulfilled",account="test.usd-ledger",asset="USD",scale="4"} 100
+
+# HELP ilp_connector_outgoing_ilp_packets Total number of outgoing ILP packets
+# TYPE ilp_connector_outgoing_ilp_packets counter
+ilp_connector_outgoing_ilp_packets{result="fulfilled",account="test.eur-ledger",asset="EUR",scale="4"} 1
+
+# HELP ilp_connector_outgoing_ilp_packet_value Total value of outgoing ILP packets
+# TYPE ilp_connector_outgoing_ilp_packet_value counter
+ilp_connector_outgoing_ilp_packet_value{result="fulfilled",account="test.eur-ledger",asset="EUR",scale="4"} 94
+
+# HELP ilp_connector_incoming_money Total of incoming money
+# TYPE ilp_connector_incoming_money gauge
+
+# HELP ilp_connector_outgoing_money Total of outgoing money
+# TYPE ilp_connector_outgoing_money gauge
+
+# HELP ilp_connector_rate_limited_ilp_packets Total of rate limited ILP packets
+# TYPE ilp_connector_rate_limited_ilp_packets counter
+
+# HELP ilp_connector_rate_limited_money Total of rate limited money requests
+# TYPE ilp_connector_rate_limited_money counter
+
+# HELP ilp_connector_balance Balances on peer account
+# TYPE ilp_connector_balance gauge
+ilp_connector_balance{account="test.usd-ledger",asset="USD",scale="4"} 100
+ilp_connector_balance{account="test.eur-ledger",asset="EUR",scale="4"} -94
